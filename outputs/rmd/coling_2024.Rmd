@@ -1,0 +1,70 @@
+---
+title: "COLING 2024"
+subtitle: "Detecting..."
+shorttitle: "Detect ADHD in SDMs"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    code_folding: show
+    self_contained: TRUE
+    thumbnails: TRUE
+    lightbox: TRUE
+    toc_depth: 4
+  pkgdown:
+    as_is: true    
+css: coling_2024.css
+author:
+  - name: '<img src="img/unige_logo.png" style="width:20px;height:20px;border:#00FFFFFF;"> Juan Barrios'
+    role:
+      - "Collecting data for first and second part of the study"
+      - "Writing - original draft for second part"
+      - "Writing - review & editing"
+  - name: '<img src="img/unige_logo.png" style="width:20px;height:20px;border:#00FFFFFF;"> Simon Gabay'
+    role:
+      - "Collecting data for second part of the study"
+      - "Writing - original draft for second part"
+      - "Writing - review & editing"
+  - name: '<img src="img/unige_logo.png" style="width:20px;height:20px;border:#00FFFFFF;"> Florian Cafiero'
+    role:
+      - "Collecting data for first part of the study"
+      - "Writing - original draft for second part"
+      - "Writing - review & editing"
+abstract: |
+  *Objective*:  
+  1. Analyze media coverage of the " over the period between 1980 and 2023 (15%)
+      - Explaining our research strategy (e.g. sources and keywords) (5%)
+      - Showing results (e.g. histograms) and 
+      - Discussing the quantitative evolution over time (salience of the field) (10%)
+  2. Analyze political decisions concerning "" (10%)
+      - Explaining the strategy for identifying decisions concerning our public policy area (5%)
+      - Identifying minor and major changes in public policy (5%)
+bibliography: ["coling2024.bib"]
+---
+
+
+## Introduction
+
+### Objectif Général
+
+Analyser la couverture médiatique de l'initative populaire "Eau-énergie: Notre Affaire!" sur la période 1980-2023.
+
+### Objectifs Spécifiques:
+
+* Expliquer notre stratégie de recherche (p.ex. sources et mots-clés)
+* Présenter les résultats (visualisation) 
+* Discuter de l'évolution quantitative dans le temps (importance du domaine)
+      
+```{r setup, echo=FALSE, message=FALSE}
+basic_packages <- c("knitr", "dplyr", "pacman", "ggplot2", "stats", "psych")                                        # Specify your packages
+not_installed <- basic_packages[!(basic_packages %in% installed.packages()[ , "Package"])]    # Extract not installed packages
+if(length(not_installed)) install.packages(not_installed) 
+
+# report
+if (length(not_installed) > 0) {
+  print(paste(length(not_installed), " packages had to be installed.")) # Print information to console
+}     
+
+pacman::p_load("papaja")
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE, fig.height=2, fig.width=4)
+```
+
